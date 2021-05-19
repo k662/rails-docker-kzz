@@ -6,10 +6,10 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7
-    working_directory: ~/rails-docker-kz/src
+    working_directory: ~/rails-docker-kzz/src
     steps:
       - checkout:
-          path: ~/rails-docker-kz
+          path: ~/rails-docker-kzz
       - ruby/install-deps
 
   test:
@@ -25,10 +25,10 @@ jobs:
       BUNDLE_RETRY: "3"
       APP_DATABASE_HOST: "127.0.0.1"
       RAILS_ENV: test
-    working_directory: ~/rails-docker-kz/src
+    working_directory: ~/rails-docker-kzz/src
     steps:
     checkout:
-          path: ~/rails-docker-kz
+          path: ~/rails-docker-kzz
       - ruby/install-deps
       - run:
           name: Database setup
